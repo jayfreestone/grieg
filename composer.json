@@ -1,0 +1,32 @@
+{
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "http://packagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "*",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=xxxxxxx"
+        }
+      }
+    }
+  ],
+  "require": {
+    "johnpbloch/wordpress": "*",
+    "wpackagist-plugin/nginx-helper": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+  },
+  "require-dev": {
+    "wpackagist-plugin/debug-bar": "*"
+  }
+}

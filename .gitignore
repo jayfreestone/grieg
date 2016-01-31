@@ -1,0 +1,6 @@
+wordpress/
+wp-content/uploads
+wp-content/plugins
+wp-config.php
+db_backups/
+vendor/

@@ -1,0 +1,31 @@
+<?php
+  define('DB_NAME', '<%= database['database'] %>');
+  define('DB_USER', '<%= database['username'] %>');
+  define('DB_PASSWORD', '<%= database['password'] %>');
+  define('DB_HOST', '<%= database['host'] %>');
+  define('DB_CHARSET', 'utf8');
+  define('DB_COLLATE', '');
+  define('WPLANG', '');
+
+  $table_prefix  = 'wp_';
+
+  <%= secret_keys %>
+
+  define('WP_HOME','<%= wp_siteurl %>');
+  define('WP_SITEURL','<%= wp_siteurl %>/wordpress');
+
+  define('WP_CONTENT_URL', '<%= wp_siteurl %>/wp-content');
+  
+  /** Disable plugin/theme modifications */
+  define('DISALLOW_FILE_EDIT',true);
+
+  /** Disable plugin/theme updates */
+  define('DISALLOW_FILE_MODS',true);
+
+  define('WP_CONTENT_DIR', realpath($_SERVER['DOCUMENT_ROOT'] . '/wp-content'));
+
+  if ( !defined('ABSPATH') ){
+   define('ABSPATH', dirname(__FILE__) . '/');
+  }
+
+  require_once(ABSPATH . 'wp-settings.php');
